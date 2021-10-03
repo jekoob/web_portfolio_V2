@@ -1,0 +1,4 @@
+.navbar-links li:first-child a {
+  background-color: #9ba6a5;
+  color: black;
+}

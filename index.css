@@ -1,0 +1,83 @@
+@font-face {
+  font-family: BrianJames;
+  src: url(fonts/BrianJames.ttf);
+}
+.navbar-links li:last-child a {
+  background-color: #9ba6a5;
+  color: black;
+}
+
+.navbar-links.active {
+  margin-top: 10px;
+}
+
+.pro-img {
+  background-image: url(img/me.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 250px;
+  width: 250px;
+  float: left;
+  margin-left: -160px;
+  margin-top: -150px;
+  border-radius: 50%;
+  border: black 2px solid;
+  z-index: 3;
+}
+
+.boxContent {
+  background-color: rgba(100, 200, 300, 0.5);
+  border: solid black 2px;
+  border-radius: 50px;
+  z-index: 3;
+  width: 800px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 300px;
+  text-align: center;
+  font-size: 2rem;
+  color: #fffdef;
+  text-shadow: 1px 1px 4px black;
+  font-family: BrianJames;
+  margin-bottom: 100px;
+}
+.boxContent p {
+  padding: 0 1.5rem 0;
+}
+
+@media (max-width: 1140px) {
+  .img-continer {
+    width: 90vw;
+  }
+  .pro-img {
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 70px;
+    float: none;
+    position: absolute;
+  }
+  .boxContent {
+    width: 85vw;
+    margin-top: 300px;
+  }
+}
+@media (max-width: 500px) {
+  .pro-img {
+    height: 150px;
+    width: 150px;
+    background-position: center -30px;
+    position: absolute;
+    top: 70px;
+    float: none;
+  }
+  .boxContent {
+    margin-bottom: 60px;
+    height: 100%;
+    margin-top: 194px;
+    font-size: 1.7rem;
+  }
+}
