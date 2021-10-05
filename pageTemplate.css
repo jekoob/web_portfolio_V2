@@ -119,34 +119,38 @@ main {
 }
 footer {
   position: fixed;
-  height: 60px;
+  height: 45px;
   width: 100%;
-  top: 94%;
+  bottom: 0px;
   z-index: 3;
   background-color: #407088;
 }
 .icons {
-  width: 35vh;
+  width: 260px;
   left: 0;
   right: 0;
-  margin: auto;
   padding: unset;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
 }
 .icons li {
   margin: auto;
-  margin-top: 0.5rem;
+  margin-top: 8px;
   align-items: center;
   list-style: none;
 }
 .icons li a {
   text-decoration: none;
-  font-size: 2.4rem;
+  font-size: 30px;
 }
 .fab,
 .fas {
   color: black;
+}
+@media (min-height: 1000px) {
+  footer {
+    top: 96%;
+  }
 }
 @media (max-width: 900px) {
   .toggle-button {

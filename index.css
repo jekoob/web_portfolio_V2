@@ -42,7 +42,6 @@
   color: #fffdef;
   text-shadow: 1px 1px 4px black;
   font-family: BrianJames;
-  margin-bottom: 100px;
 }
 .boxContent p {
   padding: 0 1.5rem 0;
@@ -75,7 +74,7 @@
     float: none;
   }
   .boxContent {
-    margin-bottom: 60px;
+    margin-bottom: 88px;
     height: 100%;
     margin-top: 194px;
     font-size: 1.7rem;
