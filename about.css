@@ -1,3 +1,8 @@
+@font-face {
+  font-family: BrianJames;
+  src: url(fonts/BrianJames.ttf);
+}
+
 .navbar-links li:nth-child(2) a {
   background-color: #9ba6a5;
   color: black;
@@ -6,11 +11,14 @@
 .proImg {
   height: 125px;
   width: 150px;
-  border: cornflowerblue 2px solid;
+  border: 3px solid rgba(100, 200, 300, 0.5);
   margin-left: 5px;
-
+  border-top-right-radius: 6px;
+  border-top-left-radius: 13px;
+  border-bottom-right-radius: 6px;
   border-bottom-left-radius: 50px;
   z-index: 3;
+  transition: opacity, 0.5s;
 }
 .tableContent {
   /* background-color: rgba(255, 254, 254, 0.856);*/
@@ -18,37 +26,57 @@
   padding-top: 56px;
   border-bottom: solid 2px white;
   justify-content: center;
+  transition: height 0.5s;
+  font-family: BrianJames;
 }
 .tableContent ul {
-  margin-left: -10px;
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 0;
-  color: blanchedalmond;
+  color: black;
   margin-top: 0;
   width: 67%;
 }
 .tableContent ul :first-child {
   border-top-right-radius: 50px;
+  border-top-left-radius: 8px;
+}
+.tableContent ul :last-child {
+  border-bottom-right-radius: 11px;
+  border-bottom-left-radius: 8px;
 }
 
 .tableContent ul li {
   list-style: none;
   text-align: center;
   padding-top: 10px;
-  background-color: rgb(53, 124, 206);
+  background-color: rgba(100, 200, 300, 0.5);
+  border-bottom: 30px solid rgb(100, 200, 300);
   height: 2.5rem;
   width: 95%;
   left: 0;
   right: 0;
   margin: auto;
   margin-bottom: 2px;
-  transition: background-color, border-bottom, border-left 1s;
+  transition: border-left 0.5s;
+}
+.fa {
+  color: black;
 }
 /*.tableContent ul li:hover {
   background-color: rgba(17, 17, 17, 0.5);
   border-bottom: 29px solid rgb(100, 100, 220);
   border-right: 20px solid transparent;
 }*/
+.toggleUp {
+  width: fit-content;
+  margin: auto;
+  font-size: 25px;
+  margin-top: 10px;
+}
+.toggleUp i {
+  transition: transform 0.5s;
+  transform: rotatex(0deg);
+}
 .heading-wrap {
   display: grid;
   grid-template-columns: 18px 95%;
@@ -73,11 +101,11 @@
   color: blue;
 }
 .vc {
+  font-family: BrianJames;
   margin: auto;
   padding-bottom: 60px;
   overflow: scroll;
   word-wrap: break-word; /* All browsers since IE 5.5+ */
-  overflow-wrap: break-word;
   background-color: rgb(255 254 254 / 86%);
 }
 @media (max-width: 500px) {
