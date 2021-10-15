@@ -159,6 +159,7 @@ footer {
   .navbar-links {
     display: none;
     width: 100%;
+    transition: display, 0.5s;
   }
   .navbar {
     flex-direction: column;

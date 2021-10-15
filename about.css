@@ -2,16 +2,27 @@
   font-family: BrianJames;
   src: url(fonts/BrianJames.ttf);
 }
-
+h2 {
+  text-decoration: underline;
+}
+p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+span {
+  color: blue;
+}
 .navbar-links li:nth-child(2) a {
   background-color: #9ba6a5;
   color: black;
 }
-
+a:visited {
+  color: inherit;
+}
 .proImg {
   height: 125px;
   width: 150px;
-  border: 3px solid rgba(100, 200, 300, 0.5);
+  border: 3px solid rgba(17, 17, 17, 0.5);
   margin-left: 5px;
   border-top-right-radius: 6px;
   border-top-left-radius: 13px;
@@ -22,6 +33,8 @@
 }
 .tableContent {
   /* background-color: rgba(255, 254, 254, 0.856);*/
+  color: #fffdef;
+  text-shadow: 1px 1px 4px black;
   display: flex;
   padding-top: 56px;
   border-bottom: solid 2px white;
@@ -32,9 +45,9 @@
 .tableContent ul {
   font-size: 18px;
   padding-left: 0;
-  color: black;
   margin-top: 0;
   width: 67%;
+  transition: opacity, 0.5s;
 }
 .tableContent ul :first-child {
   border-top-right-radius: 50px;
@@ -49,8 +62,8 @@
   list-style: none;
   text-align: center;
   padding-top: 10px;
-  background-color: rgba(100, 200, 300, 0.5);
-  border-bottom: 30px solid rgb(100, 200, 300);
+  background-color: rgba(17, 17, 17, 0.5);
+  border-bottom: 30px solid rgb(100, 200, 300, 0.5);
   height: 2.5rem;
   width: 95%;
   left: 0;
@@ -60,7 +73,7 @@
   transition: border-left 0.5s;
 }
 .fa {
-  color: black;
+  color: whitesmoke;
 }
 /*.tableContent ul li:hover {
   background-color: rgba(17, 17, 17, 0.5);
@@ -80,12 +93,10 @@
 .heading-wrap {
   display: grid;
   grid-template-columns: 18px 95%;
-  font-size: 1.6rem;
-  color: black;
 }
 .heading-wrap span {
   margin-top: 20px;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 .heading-wrap p {
@@ -96,8 +107,6 @@
 }
 
 .heading-wrap p span {
-  font-weight: bolder;
-  font-size: 1.6rem;
   color: blue;
 }
 .vc {
@@ -106,7 +115,9 @@
   padding-bottom: 60px;
   overflow: scroll;
   word-wrap: break-word; /* All browsers since IE 5.5+ */
-  background-color: rgb(255 254 254 / 86%);
+  color: #fffdef;
+  text-shadow: 2px 2px 5px black;
+  background-color: #4f72939c;
 }
 @media (max-width: 500px) {
   .vc {
