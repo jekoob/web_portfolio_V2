@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pageTemplate.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <title>Document</title>
 </head>
 <body>
-    
-    <nav class="navbar">
-        <div class="navbar-title"><span style="text-shadow:2px 2px 3px black;color:red ;">qa</span> - Junior</div>
-        <img src="img/bug.png" class="bug" alt="">
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="myWork.html">My works</a></li>
-                <li><a href="about.html">About me </a></li>
-                <li><a href="#">Home</a></li>
-            </ul>
-        </div>
-    </nav>
-
-        <div class="boxContent">
-            
-            <div class="pro-img"></div>
-            <p>Hello,my name is Yakov Sachuk. <br>
-               I'm a QA junior and looking  for a job at this position.<br><br>
-              <!-- I studied  in the automation college <a href="https://automation.co.il/" target="_blank">(www.automation.co.il)</a>.<br>
-               and graduated manual QA course ,and right now study automation course.<br><br>-->
-               Here ,at this website-portfolio ,that I've built ,you can see the all information you need about me and  my works ,that I had done.
-
+    <div class="quote-wrap">
+        <div id="quote">
+            <p>
+                
             </p>
         </div>
+        <div class="angle"></div>
+        <img src="img/bugQuote.png" class="bugQoute" alt=""> 
+    </div>
 
-    <script src="burger_menu.js"></script>
+    <header>
+        <div class="pro-img"></div>
+        <h1 class="lg-heading">
+            Yakov <span class="text-secondary">
+                Sachuk
+            </span>
+        </h1>
+        <div class="title"><span style="text-shadow:2px 2px 3px black;color:red ;">qa</span> - Junior</div>
+        <div class="bg-img"></div>
+    </header>
+    
+    <div id=container>
+       
+        
+       <!--<div id="arrowUp"></div>-->
+       <div id="innerContainer">
+        <img id="workIcon" src="img/work.png" onclick="rotateIcon()">
+        <canvas id="myCanvas"></canvas>
+        <div id="myWorks">
+                <h1 onclick="rotateIcon()">
+                    <span class="text-secondary">MY</span> WORKS</h1>
+                    <img  src="img/bug.png" class=bug>
+        </div>
+       </div>
 
 
-    <div class="bg-img"></div>
+        
+    </div>
     
     <footer>
         <ul class="icons">
-            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-            <li><a href=""><i class="fab fa-github-square"></i></a></li>
-            <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-            <li><a href=""><i class="fas fa-envelope"></i></a></li>
-            <li><a href=""><i class="fas fa-phone-square"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/yakov-sachuk-24414721a/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/jekoob"><i class="fab fa-github-square"></i></a></li>
+            <li><a href="https://www.facebook.com/yakov.sachuk"><i class="fab fa-facebook-square"></i></a></li>
+            <li><i class="fas fa-envelope" id="email" onclick="popUpEmail()"></i></li>
+            <li><i class="fas fa-phone-square" id="phone" onclick="popUpPhone()"></i></li>
         </ul>
     </footer>
+    <div id="popUpBox"></div>
 </body>
 <script src="index.js"></script>
 </html>

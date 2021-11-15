@@ -1,82 +1,280 @@
 @font-face {
-  font-family: BrianJames;
+  font-family: hollow;
+  src: url(fonts/hollowpoint.ttf);
+}
+@font-face {
+  font-family: brain;
   src: url(fonts/BrianJames.ttf);
 }
-.navbar-links li:last-child a {
-  background-color: #9ba6a5;
-  color: black;
+.bg-img {
+  position: fixed;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(68, 68, 68, 0.6);
 }
-
-.navbar-links.active {
-  margin-top: 10px;
+body {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: -2;
+  background-image: url(img/testing.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
-
+header {
+  width: 100%;
+  position: absolute;
+  top: 31%;
+}
 .pro-img {
   background-image: url(img/me.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 250px;
-  width: 250px;
-  float: left;
-  margin-left: -160px;
-  margin-top: -150px;
+  background-position: 0px -37px;
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  margin-top: 50px;
   border-radius: 50%;
   border: black 2px solid;
   z-index: 3;
 }
 
-.boxContent {
-  background-color: rgba(100, 200, 300, 0.5);
-  border: solid black 2px;
-  border-radius: 50px;
-  z-index: 3;
-  width: 800px;
-  height: 100%;
+.lg-heading {
+  font-family: hollow;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 5px;
+}
+.text-secondary {
+  color: #eece1a;
+  text-shadow: 1px 1px 4px black;
+}
+.title {
+  font-size: 28px;
+  font-family: hollow;
+  text-shadow: 1px 1px 4px #faf6e9;
+  width: fit-content;
   left: 0;
   right: 0;
   margin: auto;
-  margin-top: 300px;
   text-align: center;
-  font-size: 2rem;
-  color: #fffdef;
-  text-shadow: 1px 1px 4px black;
-  font-family: BrianJames;
+  border: solid black 2px;
+  border-radius: 20px;
+  padding: 5px 10px 8px;
+  background-color: lightslategrey;
 }
-.boxContent p {
-  padding: 0 1.5rem 0;
+.bug {
+  display: inline-block;
+  opacity: 1;
+  height: 40px;
+  width: 40px;
+  transform: rotate(56deg);
+  transition-duration: 1.5s;
+}
+.quote-wrap {
+  display: none;
+  max-width: 300px;
+  margin: auto;
+}
+#quote {
+  background: whitesmoke;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 18px;
+  border: 2px black solid;
+  border-radius: 12px;
+  font-size: 20px;
+  transition: opacity 2s;
+  transition-delay: 1s;
+
+  opacity: 0;
+  text-align: center;
+}
+#quote p {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+}
+.angle {
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 40px solid whitesmoke;
+  content: "";
+  z-index: 2;
+  left: 227px;
+  float: left;
+  margin-left: -25px;
+  position: relative;
+  transition: opacity 1s;
+  transition-delay: 1s;
+
+  opacity: 0;
 }
 
-@media (max-width: 1140px) {
-  .img-continer {
-    width: 90vw;
-  }
-  .pro-img {
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 70px;
-    float: none;
-    position: absolute;
-  }
-  .boxContent {
-    width: 85vw;
-    margin-top: 300px;
-  }
+.bugQoute {
+  height: 100px;
+  width: 90px;
+  transition-duration: 1ms;
+  opacity: 0;
+  position: absolute;
+  top: 120px;
 }
-@media (max-width: 500px) {
-  .pro-img {
-    height: 150px;
-    width: 150px;
-    background-position: center -30px;
-    position: absolute;
-    top: 70px;
-    float: none;
+#container {
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+#innerContainer {
+  position: absolute;
+  bottom: 0;
+  height: 30%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  font-family: hollow;
+  text-align: center;
+  transition: height 1.5s;
+  z-index: 2;
+}
+#workIcon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-bottom: 18px;
+  margin-top: 6px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#workIcon:target {
+  transform: rotate(45deg);
+}
+#myWorks {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: cadetblue;
+  bottom: 5px;
+}
+#arrowUp {
+  bottom: 20px;
+  border-bottom: cadetblue solid 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#myCanvas {
+  width: 100%;
+  height: 30px;
+}
+#myWorks h1 {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  padding: 5vv;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.workCart {
+  max-width: 500px;
+  width: 0%;
+  height: 250px;
+  background-color: cadetblue;
+  margin: auto;
+  margin-top: 15px;
+  opacity: 1;
+  border-radius: 20px;
+  transition: width 1.5s;
+}
+
+#work1 {
+  background-image: url(img/hungman.png);
+  background-position: center;
+  background-size: cover;
+}
+.workCart a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+footer {
+  position: fixed;
+  height: 45px;
+  width: 100%;
+  bottom: 0px;
+  z-index: 3;
+  background-color: #444;
+}
+.icons {
+  width: 260px;
+  left: 0;
+  right: 0;
+  padding: unset;
+  margin: auto;
+  display: flex;
+}
+.icons li {
+  margin: auto;
+  margin-top: 8px;
+  align-items: center;
+  list-style: none;
+}
+.icons li {
+  text-decoration: none;
+  font-size: 30px;
+}
+#popUpBox {
+  position: absolute;
+  display: block;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 2;
+  bottom: -20px;
+  padding: 5px;
+  width: fit-content;
+  background-color: darkgray;
+  color: black;
+  font-size: 23px;
+  transition: bottom 0.5s;
+}
+
+.fab,
+.fas {
+  color: whitesmoke;
+}
+
+@media (min-height: 600px) {
+  .quote-wrap {
+    display: block;
   }
-  .boxContent {
-    margin-bottom: 88px;
-    height: 100%;
-    margin-top: 194px;
-    font-size: 1.7rem;
+  .pro-img {
+    margin-top: 0;
   }
 }
