@@ -27,6 +27,7 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 header {
   width: 100%;
@@ -161,6 +162,21 @@ header {
   margin-top: 6px;
   transition: 0.5s;
   cursor: pointer;
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  0% {
+    transform: translate(0px, 0px) rotateY(0deg);
+  }
+  50% {
+    transform: translate(0px, 30px) rotateY(360deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotateY(720deg);
+  }
 }
 
 #workIcon:target {
@@ -214,7 +230,7 @@ header {
 }
 
 #work1 {
-  background-image: url(img/hungman.png);
+  background-image: url(img/hangmanGame.png);
   background-position: center;
   background-size: cover;
 }

@@ -67,49 +67,79 @@ function rotateIcon(){
 
 let popUpBox = document.getElementById("popUpBox");
 let value = popUpBox.offsetTop;
-let popCount = 0;
+let counPop=0,counPop1=0;
 function popUpEmail(){
    let value1=popUpBox.offsetTop;
    
-   if(value1>=value){
+   if(value1>=value && counPop1==0  ){
    console.log(value1);
    let email = document.createElement("P");
    email.innerHTML="yakov.sachuk@gmail.com";
    popUpBox.appendChild(email);
    popUpBox.style.bottom="70px";
+   counPop++;
    }
 
    else{
-      
-      console.log(value1);
-      
-      popUpBox.style.bottom="-100px";
+      if(counPop1==1){
+         popUpBox.style.bottom="-100px";
+         setTimeout(() => {
+            popUpBox.removeChild(popUpBox.lastElementChild); 
+            let email = document.createElement("P");
+            email.innerHTML="yakov.sachuk@gmail.com";
+            popUpBox.appendChild(email);
+            popUpBox.style.bottom="70px";
+         }, 500);
+         counPop++;
+         counPop1=0;
+      }
+      else{
+         popUpBox.style.bottom="-100px";
       setTimeout(() => {
          popUpBox.removeChild(popUpBox.lastElementChild); 
       }, 500);
-      
+      counPop=0;
    }
+      }
+
 };
+
 function popUpPhone(){
    let value1=popUpBox.offsetTop;
    
-   if(value1>=value && countPop==0){
+   if(value1>=value && counPop==0 ){
    console.log(value1);
    let phone = document.createElement("P");
    phone.innerHTML="0587846888";
    popUpBox.appendChild(phone)
    popUpBox.style.bottom="70px";
-   countPop++;
+   counPop1++;
    }
 
    else{
+      if(counPop==1){
+         popUpBox.style.bottom="-100px";
+         setTimeout(() => {
+            popUpBox.removeChild(popUpBox.childNodes[0]);
+            let phone = document.createElement("P");
+            phone.innerHTML="0587846888";
+            popUpBox.appendChild(phone)
+            popUpBox.style.bottom="70px"; 
+         }, 500);
+        counPop1++;
+        counPop=0;
+      }
+      else{
       console.log(value1);
       
       popUpBox.style.bottom="-100px";
       setTimeout(() => {
          popUpBox.removeChild(popUpBox.childNodes[0]); 
       }, 500);
-      countPop=0;
+      counPop1=0;
+   }
+     
+ 
    }
 };
 
@@ -163,3 +193,7 @@ setInterval(()=>{
    }
 }, 5000);
 //toarrowUp();
+
+//live icon
+let iconPosition = 2;
+let WorkIcon=document.getElementById("workIcon");
