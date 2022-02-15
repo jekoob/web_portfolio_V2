@@ -9,60 +9,9 @@ let quote = document.getElementById("quote");
 let quoteAngle = document.getElementsByClassName("angle")[0];
 
 
-const arrowUp = document.getElementById("myCanvas");
-console.log(wrapeQuoteWidth,screenWidth);
+
 bug.style.transform = "translateX(-"+(screenWidth*2)+"px)";
 bug.style.transitionDuration="1.5s";
-
-/*function toarrowUp(){
-   arrowUp.style.borderRight=screenWidth/2+"px solid transparent";
-   arrowUp.style.borderLeft=screenWidth/2+"px solid transparent";
-}*/
-var canvasElement = document.querySelector("#myCanvas");
-var context = canvasElement.getContext("2d");
-context.beginPath();
-context.moveTo(0, 150);
-context.lineTo(150, 0);
-context.lineTo(300, 150);
-context.moveTo(0, 150);
-context.closePath();
-context.fillStyle = "cadetblue";
-context.fill();
-
-//create wrapper elemt for works grid.
-var myWorks = document.getElementById("myWorks");
-let div = document. createElement("div");
-div.setAttribute("class","wrapper");
-myWorks.appendChild(div);
-
-var link = document.createElement("a");
-link.setAttribute("href","https://jekoob.github.io/Hangman/");
-var workCart = document.createElement("div");
-workCart.setAttribute("class","workCart");
-document.getElementsByClassName("wrapper")[0].appendChild(workCart);
-document.getElementsByClassName("workCart")[0].appendChild(link);
-
-
-function rotateIcon(){
-   let WorkIcon=document.getElementById("workIcon");
-   WorkIcon.style.transform="rotate(25deg)";
-   WorkIcon.style.opacity=0;
-   let container = document.getElementById("container");
-  
-   setTimeout(() => {
-      WorkIcon.style.height=0;
-      WorkIcon.style.width=0;
-      WorkIcon.style.margin=0;
-      document.getElementById("innerContainer").style.height="102%";
-      document.getElementById("myCanvas").style.background="cadetblue";
-   }, 700);
-   
-   setTimeout(() => {
-      document.getElementsByClassName("workCart")[0].style.border="2px black solid";
-      document.getElementsByClassName("workCart")[0].style.width= "90%" ;
-      document.getElementsByClassName("workCart")[0].setAttribute("id","work1");
-   }, 1500);
-}
 
 
 let popUpBox = document.getElementById("popUpBox");

@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
 <body>
+	 <div class="bg-img"></div>
     <div class="quote-wrap">
         <div id="quote">
             <p>
@@ -19,34 +20,37 @@
         <img src="img/bugQuote.png" class="bugQoute" alt=""> 
     </div>
 
-    <header>
-        <div class="pro-img"></div>
-        <h1 class="lg-heading">
-            Yakov <span class="text-secondary">
-                Sachuk
-            </span>
-        </h1>
-        <div class="title"><span style="text-shadow:2px 2px 3px black;color:red ;">qa</span> - Junior</div>
-        <div class="bg-img"></div>
-    </header>
-    
-    <div id=container>
-       
-        
-       <!--<div id="arrowUp"></div>-->
-       <div id="innerContainer">
-        <img id="workIcon" src="img/work.png" onclick="rotateIcon()">
-        <canvas id="myCanvas"></canvas>
-        <div id="myWorks">
-                <h1 onclick="rotateIcon()">
-                    <span class="text-secondary">MY</span> WORKS</h1>
-                    <img  src="img/bug.png" class=bug>
+    <header class="outerWrapper">
+    	<div class="FrontEndLink">
+    		<img class="icon" src="img/fronEnd.png" onclick="rotateIcon()">
+    		 <h1 onclick="rotateIcon()">
+                    <span class="text-secondary">Frond -</span> end</h1>
+    	</div>
+    	<div class="main">
+		    <div class="pro-img"></div>
+		    <h1 class="lg-heading">
+		        Yakov <span class="text-secondary">
+		            Sachuk
+		        </span>
+		    </h1>
+		    <div class="title"><span style="text-shadow:2px 2px 3px black;color:red ;">QA/ATUOMATION</span> - Junior</div>
+		    
+		</div>
+        <div class="autoLink">
+        	<img class="icon" src="img/auto.png" onclick="rotateIcon()">
+    		 <h1 onclick="rotateIcon()">
+                    <span class="text-secondary">Atuo</span>mation</h1>
         </div>
-       </div>
-
-
+       
+    </header>
+    <div id="innerContainer">
+        <img class="icon" src="img/cv.png" onclick="rotateIcon()" style="color:black;">
+         <h1 onclick="rotateIcon()"><span class="text-secondary">MY</span> - CV<img  src="img/bug.png" class=bug></h1>
         
     </div>
+
+
+
     
     <footer>
         <ul class="icons">

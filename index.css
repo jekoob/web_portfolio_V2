@@ -6,6 +6,11 @@
   font-family: brain;
   src: url(fonts/BrianJames.ttf);
 }
+@keyframes dribblingFram{
+  0%{transform: translate(0px, 0px);}
+  50%{transform: translate(0px, 30px);}
+  100%{transform: translate(0px, 0px);}
+}
 .bg-img {
   position: fixed;
   z-index: -2;
@@ -29,51 +34,6 @@ body {
   flex-direction: column;
   overflow: hidden;
 }
-header {
-  width: 100%;
-  position: absolute;
-  top: 31%;
-}
-.pro-img {
-  background-image: url(img/me.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0px -37px;
-  height: 150px;
-  width: 150px;
-  margin: auto;
-  margin-top: 50px;
-  border-radius: 50%;
-  border: black 2px solid;
-  z-index: 3;
-}
-
-.lg-heading {
-  font-family: hollow;
-  font-weight: 400;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 2px black;
-  margin-bottom: 5px;
-}
-.text-secondary {
-  color: #eece1a;
-  text-shadow: 1px 1px 4px black;
-}
-.title {
-  font-size: 28px;
-  font-family: hollow;
-  text-shadow: 1px 1px 4px #faf6e9;
-  width: fit-content;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-  border: solid black 2px;
-  border-radius: 20px;
-  padding: 5px 10px 8px;
-  background-color: lightslategrey;
-}
 .bug {
   display: inline-block;
   opacity: 1;
@@ -83,7 +43,7 @@ header {
   transition-duration: 1.5s;
 }
 .quote-wrap {
-  display: none;
+  display: block;
   max-width: 300px;
   margin: auto;
 }
@@ -133,25 +93,78 @@ header {
   position: absolute;
   top: 120px;
 }
-#container {
-  position: absolute;
-  text-align: center;
-  height: 100%;
+header {
   width: 100%;
+  position: absolute;
+  top: 31%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+   align-items:center;
 }
-#innerContainer {
-  position: absolute;
-  bottom: 0;
-  height: 30%;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-  font-family: hollow;
-  text-align: center;
-  transition: height 1.5s;
+.FrontEndLink,.autoLink{
   z-index: 2;
+  width: 250px;
+  height: 250px;
+  animation: dribblingFram 4s infinite;
+  text-align: center;
+  font-family: hollow;
+  cursor: pointer;
 }
-#workIcon {
+
+.pro-img {
+  background-image: url(img/me.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -37px;
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 50%;
+  border: black 2px solid;
+  z-index: 3;
+}
+
+.lg-heading {
+  font-family: hollow;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 5px;
+}
+.text-secondary {
+  color: #eece1a;
+  text-shadow: 1px 1px 4px black;
+}
+.title {
+  font-size: 28px;
+  font-family: hollow;
+  text-shadow: 1px 1px 4px #faf6e9;
+  width: fit-content;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  border: solid black 2px;
+  border-radius: 20px;
+  padding: 5px 10px 8px;
+  background-color: lightslategrey;
+}
+
+#innerContainer {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 62px;
+    font-family: hollow;
+    animation: dribblingFram 4s infinite;
+}
+
+.icon {
   display: inline-block;
   height: 60px;
   width: 60px;
@@ -179,66 +192,7 @@ header {
   }
 }
 
-#workIcon:target {
-  transform: rotate(45deg);
-}
-#myWorks {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  background: cadetblue;
-  bottom: 5px;
-}
-#arrowUp {
-  bottom: 20px;
-  border-bottom: cadetblue solid 40px;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-#myCanvas {
-  width: 100%;
-  height: 30px;
-}
-#myWorks h1 {
-  display: inline-block;
-  margin: 0;
-  text-align: center;
-  padding: 5vv;
-  cursor: pointer;
-}
 
-.wrapper {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-
-  display: grid;
-  grid-template-columns: 100%;
-}
-
-.workCart {
-  max-width: 500px;
-  width: 0%;
-  height: 250px;
-  background-color: cadetblue;
-  margin: auto;
-  margin-top: 15px;
-  opacity: 1;
-  border-radius: 20px;
-  transition: width 1.5s;
-}
-
-#work1 {
-  background-image: url(img/hangmanGame.png);
-  background-position: center;
-  background-size: cover;
-}
-.workCart a {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
 footer {
   position: fixed;
   height: 45px;
@@ -260,11 +214,10 @@ footer {
   margin-top: 8px;
   align-items: center;
   list-style: none;
-}
-.icons li {
   text-decoration: none;
   font-size: 30px;
 }
+
 #popUpBox {
   position: absolute;
   display: block;
