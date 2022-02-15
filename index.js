@@ -2,18 +2,14 @@ const quotes = ["“Quality is never an accident; it is always the result of int
                 "“Software never was perfect and won't get perfect."];
 
 let screenWidth = document.getElementsByTagName("body")[0].offsetWidth;
-let screenHeight = document.getElementsByTagName("body")[0].offsetHeight;
-let bug = document.getElementsByClassName("bugQoute")[0];
-let wrapeQuoteWidth = document.getElementsByClassName("quote-wrap")[0].offsetWidth;
-let quote = document.getElementById("quote");
+let screenHeight = document.getElementById("bg-img").offsetHeight;
+let bug = document.getElementsByClassName("bugQoute")[0];   //img of the bug.
+// outter qoute container that contains the "qoute"div and angle div.
+let wrapeQuoteWidth = document.getElementsByClassName("quote-wrap")[0].offsetWidth; 
+let quote = document.getElementById("quote");//div that contain the qoute.
+//div that responsible for tendency of the bottom border  
 let quoteAngle = document.getElementsByClassName("angle")[0];
-
-
-
-bug.style.transform = "translateX(-"+(screenWidth*2)+"px)";
-bug.style.transitionDuration="1.5s";
-
-
+let cv=document.getElementById("cvLink");
 let popUpBox = document.getElementById("popUpBox");
 let value = popUpBox.offsetTop;
 let counPop=0,counPop1=0;
@@ -92,7 +88,9 @@ function popUpPhone(){
    }
 };
 
-
+// fitting the length of the trail for the bug
+bug.style.transform = "translateX(-"+(screenWidth*2)+"px)"; 
+bug.style.transitionDuration="1.5s";
 setTimeout(() => {
   
    bug.style.opacity=1;
@@ -141,8 +139,14 @@ setInterval(()=>{
       count++;
    }
 }, 5000);
-//toarrowUp();
 
-//live icon
-let iconPosition = 2;
-let WorkIcon=document.getElementById("workIcon");
+function slideBlankUp(){
+   cv.style.opacity="0";
+   let blankUp = document.createElement("div");
+   blankUp.setAttribute("id","blankUp");
+   document.getElementsByTagName("body")[0].appendChild(blankUp);
+   setTimeout(function(){
+      blankUp.style.height=screenHeight+"px";
+   },500);
+   
+}

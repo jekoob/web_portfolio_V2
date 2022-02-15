@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-	 <div class="bg-img"></div>
+	 <div id="bg-img"></div>
     <div class="quote-wrap">
         <div id="quote">
             <p>
@@ -21,8 +21,8 @@
     </div>
 
     <header class="outerWrapper">
-    	<div class="FrontEndLink">
-    		<img class="icon" src="img/fronEnd.png" onclick="rotateIcon()">
+    	<div id="FrontEndLink" class="myLinks">
+    		<img class="imgLink" src="img/fronEnd.png" onclick="">
     		 <h1 onclick="rotateIcon()">
                     <span class="text-secondary">Frond -</span> end</h1>
     	</div>
@@ -36,22 +36,21 @@
 		    <div class="title"><span style="text-shadow:2px 2px 3px black;color:red ;">QA/ATUOMATION</span> - Junior</div>
 		    
 		</div>
-        <div class="autoLink">
-        	<img class="icon" src="img/auto.png" onclick="rotateIcon()">
+        <div id="autoLink" class="myLinks">
+        	<img class="imgLink" src="img/auto.png" onclick="rotateIcon()">
     		 <h1 onclick="rotateIcon()">
                     <span class="text-secondary">Atuo</span>mation</h1>
         </div>
        
     </header>
-    <div id="innerContainer">
-        <img class="icon" src="img/cv.png" onclick="rotateIcon()" style="color:black;">
-         <h1 onclick="rotateIcon()"><span class="text-secondary">MY</span> - CV<img  src="img/bug.png" class=bug></h1>
+    <div id="cvLink" class="myLinks" onclick="slideBlankUp()">
+        <img class="imgLink" src="img/cv.png"  style="color:black;">
+        <h1 >
+            <span class="text-secondary">MY</span> - CV
+            <img  src="img/bug.png" class=bug>
+        </h1>
         
     </div>
-
-
-
-    
     <footer>
         <ul class="icons">
             <li><a href="https://www.linkedin.com/in/yakov-sachuk-24414721a/"><i class="fab fa-linkedin"></i></a></li>
