@@ -1,5 +1,6 @@
 const quotes = ["“Quality is never an accident; it is always the result of intelligent effort.”",
                 "“Software never was perfect and won't get perfect."];
+let body = document.getElementsByTagName("body")[0];
 let bgImg = document.getElementById("bg-img");
 let screenWidth = document.getElementsByTagName("body")[0].offsetWidth;
 let screenHeight = document.getElementById("bg-img").offsetHeight;
@@ -27,14 +28,20 @@ let previousContactLink={
    elementId:null,
    contactDetail:null
 };
+let shell = document.createElement("div");
+shell.setAttribute("id","shell");
 function popUpContact(el){
-   $(bgImg).on("click",(event)=>{
+   
+   
+ 
+   shell.style.height=screenHeight;
+   $(shell).on("click",(event)=>{
       let pointLog=event.target;
       if(document.getElementById(contactIcons[0].elementId).target!=pointLog&&
          document.getElementById(contactIcons[1].elementId).target!=pointLog){
             popUpBox.style.bottom="0";
             firsTime=true;
-            event.preventDefault();
+            body.removeChild(shell);
             return;
       }
    });
@@ -46,6 +53,7 @@ function popUpContact(el){
           setTimeout(()=>{
             popUpBox.style.bottom="70px";
          },200);
+          body.appendChild(shell);
           firsTime=false;
       }
       else if(firsTime==false){
@@ -64,7 +72,7 @@ function popUpContact(el){
 }
 
 // fitting the length of the trail for the bug
-bug.style.transform = "translateX(-"+(screenWidth*2)+"px)"; 
+bug.style.transform = "translateX(-"+(screenWidth/2)+"px)"; 
 bug.style.transitionDuration="1.5s";
 setTimeout(() => {
   

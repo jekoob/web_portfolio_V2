@@ -25,6 +25,7 @@
 }
 
 body {
+  position: absolute;
   min-height: 100%;
   width: 100%;
   margin: 0;
@@ -43,13 +44,15 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(120, 120, 120,0.5);
+  background:linear-gradient(to bottom right ,rgba(20, 79, 227,0.6)10% ,rgba(120, 120, 120,0.5 )60%,rgba(20, 159, 219, 0.4));
+  
 }
 .quote-wrap {
   z-index: 1;
-  display: block;
+  height: 100%;
   max-width: 300px;
   margin: auto;
+  margin-top:0;
 }
 #quote {
   background: whitesmoke;
@@ -102,11 +105,19 @@ body {
   position: absolute;
   top: 31%;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  flex-direction: column;
+  column-gap: 50px;
   justify-content:space-around;
    align-items:center;
 }
-
+.row{
+  display: flex;
+   flex-direction: row;
+}
+.main{
+ margin: 70px 255px 0;
+}
 .pro-img {
   background-image: url(img/me.jpeg);
   background-size: cover;
@@ -150,8 +161,7 @@ body {
 
 .myLinks{
   z-index: 2;
-  width: 250px;
-  height: 250px;
+  margin-top: 52px;
   animation: dribblingFram 4s infinite;
   text-align: center;
   font-family: hollow;
@@ -161,13 +171,11 @@ body {
 
 #cvLink {
     display: block;
-    position: absolute;
     left: 0;
     right: 0;
     margin: auto;
+    margin-top: 0px;
     text-align: center;
-    bottom: 62px;
-    
 }
 .blank{
     position: absolute;
@@ -265,7 +273,12 @@ footer {
   font-size: 23px;
   transition: bottom 0.5s;
 }
-
+#shell{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
 .fab,
 .fas {
   color: whitesmoke;
