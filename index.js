@@ -1,6 +1,6 @@
 const quotes = ["“Quality is never an accident; it is always the result of intelligent effort.”",
                 "“Software never was perfect and won't get perfect."];
-
+let bgImg = document.getElementById("bg-img");
 let screenWidth = document.getElementsByTagName("body")[0].offsetWidth;
 let screenHeight = document.getElementById("bg-img").offsetHeight;
 let bug = document.getElementsByClassName("bugQoute")[0];   //img of the bug.
@@ -12,82 +12,56 @@ let quoteAngle = document.getElementsByClassName("angle")[0];
 let myLinks = document.getElementsByClassName("myLinks");
 let cv=document.getElementById("cvLink");
 let popUpBox = document.getElementById("popUpBox");
-let value = popUpBox.offsetTop;
-let counPop=0,counPop1=0;
-function popUpEmail(){
-   let value1=popUpBox.offsetTop;
-   
-   if(value1>=value && counPop1==0  ){
-   console.log(value1);
-   let email = document.createElement("P");
-   email.innerHTML="yakov.sachuk@gmail.com";
-   popUpBox.appendChild(email);
-   popUpBox.style.bottom="70px";
-   counPop++;
-   }
 
-   else{
-      if(counPop1==1){
-         popUpBox.style.bottom="-100px";
-         setTimeout(() => {
-            popUpBox.removeChild(popUpBox.lastElementChild); 
-            let email = document.createElement("P");
-            email.innerHTML="yakov.sachuk@gmail.com";
-            popUpBox.appendChild(email);
+let contactIcons=[
+{
+   "elementId":document.getElementById("email").getAttribute("id"),
+   "contactDetail":"yakov.sachuk@gmail.com",
+},
+{  
+   "elementId":document.getElementById("phone").getAttribute("id"),
+   "contactDetail":"0587846888",
+}];
+let firsTime=true;
+let previousContactLink={
+   elementId:null,
+   contactDetail:null
+};
+function popUpContact(el){
+   $(bgImg).on("click",(event)=>{
+      let pointLog=event.target;
+      if(document.getElementById(contactIcons[0].elementId).target!=pointLog&&
+         document.getElementById(contactIcons[1].elementId).target!=pointLog){
+            popUpBox.style.bottom="0";
+            firsTime=true;
+            event.preventDefault();
+            return;
+      }
+   });
+   contactIcons.forEach(icon=>{
+      if(icon.elementId==el.getAttribute("id")&&firsTime==true){
+         previousContactLink.elementId=icon.elementId;
+         previousContactLink.contactDetail=icon.contactDetail;
+         popUpBox.innerHTML=icon.contactDetail;
+          setTimeout(()=>{
             popUpBox.style.bottom="70px";
-         }, 500);
-         counPop++;
-         counPop1=0;
+         },200);
+          firsTime=false;
       }
-      else{
-         popUpBox.style.bottom="-100px";
-      setTimeout(() => {
-         popUpBox.removeChild(popUpBox.lastElementChild); 
-      }, 500);
-      counPop=0;
-   }
+      else if(firsTime==false){
+        if(el.getAttribute("id")!==previousContactLink.elementId&&icon.elementId==el.getAttribute("id")){
+            popUpBox.style.bottom="0";
+            previousContactLink.elementId=icon.elementId;
+            previousContactLink.contactDetail=icon.contactDetail;
+                  setTimeout(()=>{
+            popUpBox.innerHTML=icon.contactDetail;
+            popUpBox.style.bottom="70px";
+         },400);
+        } 
       }
+   });
 
-};
-
-function popUpPhone(){
-   let value1=popUpBox.offsetTop;
-   
-   if(value1>=value && counPop==0 ){
-   console.log(value1);
-   let phone = document.createElement("P");
-   phone.innerHTML="0587846888";
-   popUpBox.appendChild(phone)
-   popUpBox.style.bottom="70px";
-   counPop1++;
-   }
-
-   else{
-      if(counPop==1){
-         popUpBox.style.bottom="-100px";
-         setTimeout(() => {
-            popUpBox.removeChild(popUpBox.childNodes[0]);
-            let phone = document.createElement("P");
-            phone.innerHTML="0587846888";
-            popUpBox.appendChild(phone)
-            popUpBox.style.bottom="70px"; 
-         }, 500);
-        counPop1++;
-        counPop=0;
-      }
-      else{
-      console.log(value1);
-      
-      popUpBox.style.bottom="-100px";
-      setTimeout(() => {
-         popUpBox.removeChild(popUpBox.childNodes[0]); 
-      }, 500);
-      counPop1=0;
-   }
-     
- 
-   }
-};
+}
 
 // fitting the length of the trail for the bug
 bug.style.transform = "translateX(-"+(screenWidth*2)+"px)"; 

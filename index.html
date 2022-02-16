@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	 <div id="bg-img"></div>
@@ -41,7 +42,7 @@
     		 <h1 >
                     <span class="text-secondary">Atuo</span>mation</h1>
         </div>
-       
+ 
     </header>
     <div id="cvLink" class="myLinks" onclick="slideBlankUp()">
         <img class="imgLink" src="img/cv.png"  style="color:black;">
@@ -56,8 +57,8 @@
             <li><a href="https://www.linkedin.com/in/yakov-sachuk-24414721a/"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://github.com/jekoob"><i class="fab fa-github-square"></i></a></li>
             <li><a href="https://www.facebook.com/yakov.sachuk"><i class="fab fa-facebook-square"></i></a></li>
-            <li><i class="fas fa-envelope" id="email" onclick="popUpEmail()"></i></li>
-            <li><i class="fas fa-phone-square" id="phone" onclick="popUpPhone()"></i></li>
+            <li><i class="fas fa-envelope" id="email" onclick="popUpContact(this)"></i></li>
+            <li><i class="fas fa-phone-square" id="phone" onclick="popUpContact(this)"></i></li>
         </ul>
     </footer>
     <div id="popUpBox"></div>
