@@ -9,6 +9,7 @@ let wrapeQuoteWidth = document.getElementsByClassName("quote-wrap")[0].offsetWid
 let quote = document.getElementById("quote");//div that contain the qoute.
 //div that responsible for tendency of the bottom border  
 let quoteAngle = document.getElementsByClassName("angle")[0];
+let myLinks = document.getElementsByClassName("myLinks");
 let cv=document.getElementById("cvLink");
 let popUpBox = document.getElementById("popUpBox");
 let value = popUpBox.offsetTop;
@@ -141,12 +142,34 @@ setInterval(()=>{
 }, 5000);
 
 function slideBlankUp(){
-   cv.style.opacity="0";
+   myLinks[2].style.opacity="0";
    let blankUp = document.createElement("div");
+   blankUp.setAttribute("class","blank");
    blankUp.setAttribute("id","blankUp");
    document.getElementsByTagName("body")[0].appendChild(blankUp);
    setTimeout(function(){
       blankUp.style.height=screenHeight+"px";
    },500);
-   
+}
+
+function slideBlankRight(){
+   myLinks[0].style.opacity="0";
+   let blankRight = document.createElement("div");
+   blankRight.setAttribute("class","blank");
+   blankRight.setAttribute("id","blankRight");
+   document.getElementsByTagName("body")[0].appendChild(blankRight);
+   setTimeout(function(){
+      blankRight.style.width=screenWidth+"px";
+   },500); 
+}
+
+function slideBlankLeft(){
+   myLinks[1].style.opacity="0";
+   let blankLeft = document.createElement("div");
+   blankLeft.setAttribute("class","blank");
+   blankLeft.setAttribute("id","blankLeft");
+   document.getElementsByTagName("body")[0].appendChild(blankLeft);
+   setTimeout(function(){
+      blankLeft.style.width=screenWidth+"px";
+   },500);
 }
