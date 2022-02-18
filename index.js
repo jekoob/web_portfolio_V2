@@ -152,6 +152,7 @@ function slideBlankLeft(){
    blankLeft.setAttribute("id","blankLeft");
    document.getElementsByTagName("body")[0].appendChild(blankLeft);
    setTimeout(function(){
-      blankLeft.style.width=screenWidth+"px";
-   },500);
+      blankLeft.style.left="100%";
+      window.open("autoProPage.html","_self");
+   },1000);
 }

@@ -1,0 +1,123 @@
+@font-face {
+  font-family: hollow;
+  src: url(fonts/hollowpoint.ttf);
+}
+*{
+	margin:0;
+	box-sizing: border-box;
+}
+body{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	
+}
+#bg-img{
+	z-index: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url(img/autoPro.jpg);
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-position: center center;
+  	background-size: cover;
+  	filter: blur(6px);
+}
+#topTitle{
+	z-index: 1;
+	opacity: 0;
+	position: fixed;
+	width: 100%;
+	background-color: rgba(255,255,255, 0.7);
+	font-family: hollow;
+	text-align: center;
+	margin-top: 29px;
+	font-size: 40px;
+	font-weight: 200;
+	letter-spacing: 3px;
+	transition:opacity 0.5s;
+}
+.text-secondary {
+  color: #eece1a;
+  text-shadow: -1px -2px 4px black;
+}
+#proContainer{
+	position: relative;
+	margin: auto;
+	opacity: 0;
+	transition:opacity 0.5s;
+	margin-top: 158px;
+	margin-bottom: 300px;
+	width: 80%;
+    height: 593px;
+    overflow-y: scroll;
+    direction: rtl;
+}
+#proContainer::-webkit-scrollbar-track 
+{
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+ border-radius:10px;
+}
+.projects{
+	direction: ltr;
+	display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+
+.projects h2{
+	display: inline-block;
+	width: fit-content;
+	padding: 6px 24px 3px 6px;
+    border-top-right-radius: 30px;
+	text-decoration: underline;
+	background-color: rgba(255,255,255, 0.7);
+}
+.projects h3{
+	margin-top: 30px;
+}
+.proContect{
+	line-height: 1.6;
+	margin-top: 2px;
+	padding: 6px 24px 3px 6px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 40px;
+    background-color: rgba(255,255,255, 0.7);
+    width: 100%;
+    display: inline-block;
+}
+.siteLink a{
+	text-decoration: none;
+}
+footer {
+  position: fixed;
+  height: 45px;
+  width: 100%;
+  bottom: 0px;
+  z-index: 5;
+  background-color: #444;
+}
+.icons {
+  width: 260px;
+  left: 0;
+  right: 0;
+  padding: unset;
+  margin: auto;
+  display: flex;
+  cursor: pointer;
+}
+.icons li {
+  margin: auto;
+  margin-top: 8px;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  font-size: 30px;
+}
+.fab,
+.fas {
+  color: whitesmoke;
+}
