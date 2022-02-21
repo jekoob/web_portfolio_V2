@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FrondEndPro</title>
+	<link rel="stylesheet" type="text/css" href="frontEnd.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="bg-img"></div>
+	<h1 id="topTitle">FrondEnd <span class="text-secondary">projects</span></h1>
+	<main id="gallery">
+		<div id="scale">
+			<ul id="roller">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<div id="proContainer">
+			<div id="leftArrow" class="arrows">
+				<i class="fas fa-arrow-circle-left" onclick="leftArrow()"></i>
+			</div>
+			<div id="photoContainer">
+						<img src="img/hangmanGame.png">
+						<img src="img/hungman.png">
+						<img src="img/autoPro.jpg">
+						<img src="img/front.jpg">
+				</div>
+			<div id="rightArrow" class="arrows">
+				<i class="fas fa-arrow-circle-right" onclick="rightArrow()"></i>
+			</div>
+		</div>
+	</main>
+	<footer>
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/yakov-sachuk-24414721a/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/jekoob"><i class="fab fa-github-square"></i></a></li>
+            <li><a href="https://www.facebook.com/yakov.sachuk"><i class="fab fa-facebook-square"></i></a></li>
+            <li><i class="fas fa-envelope" id="email" onclick="popUpContact(this)"></i></li>
+            <li><i class="fas fa-phone-square" id="phone" onclick="popUpContact(this)"></i></li>
+        </ul>
+    </footer>
+    <div id="popUpBox"></div>
+	<script type="text/javascript" src="front.js"></script>
+</body>
+
+</html>

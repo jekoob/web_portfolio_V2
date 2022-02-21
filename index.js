@@ -13,7 +13,7 @@ let quoteAngle = document.getElementsByClassName("angle")[0];
 let myLinks = document.getElementsByClassName("myLinks");
 let cv=document.getElementById("cvLink");
 let popUpBox = document.getElementById("popUpBox");
-
+console.log(myLinks);
 let contactIcons=[
 {
    "elementId":document.getElementById("email").getAttribute("id"),
@@ -124,26 +124,10 @@ setInterval(()=>{
 }, 5000);
 
 function slideBlankUp(){
-   myLinks[2].style.opacity="0";
-   let blankUp = document.createElement("div");
-   blankUp.setAttribute("class","blank");
-   blankUp.setAttribute("id","blankUp");
-   document.getElementsByTagName("body")[0].appendChild(blankUp);
-   setTimeout(function(){
-      blankUp.style.height=screenHeight+"px";
-   },500);
+   window.open("Yakov Sachuk CV.docx","viewer"); 
 }
 
-function slideBlankRight(){
-   myLinks[0].style.opacity="0";
-   let blankRight = document.createElement("div");
-   blankRight.setAttribute("class","blank");
-   blankRight.setAttribute("id","blankRight");
-   document.getElementsByTagName("body")[0].appendChild(blankRight);
-   setTimeout(function(){
-      blankRight.style.width=screenWidth+"px";
-   },500); 
-}
+
 
 function slideBlankLeft(){
    myLinks[1].style.opacity="0";
@@ -153,6 +137,20 @@ function slideBlankLeft(){
    document.getElementsByTagName("body")[0].appendChild(blankLeft);
    setTimeout(function(){
       blankLeft.style.left="100%";
+      myLinks[1].style.opacity="1";
       window.open("autoProPage.html","_self");
+   },1000);
+}
+
+function slideBlankRight(){
+   myLinks[0].style.opacity="0";
+   let blankRight = document.createElement("div");
+   blankRight.setAttribute("class","blank");
+   blankRight.setAttribute("id","blankRight");
+   document.getElementsByTagName("body")[0].appendChild(blankRight);
+   setTimeout(function(){
+      blankRight.style.left="100%";
+      myLinks[0].style.opacity="1";
+      window.open("frontEndPage.html","_self");
    },1000);
 }
