@@ -31,3 +31,55 @@ function leftArrow(){
 	}
 	
 }
+let popUpBox = document.getElementById("popUpBox");
+let contactIcons=[
+{
+   "elementId":document.getElementById("email").getAttribute("id"),
+   "contactDetail":"yakov.sachuk@gmail.com",
+},
+{  
+   "elementId":document.getElementById("phone").getAttribute("id"),
+   "contactDetail":"0587846888",
+}];
+let firsTime=true;
+let previousContactLink={
+   elementId:null,
+   contactDetail:null
+};
+
+function popUpContact(el){
+   $(shell).on("click",(event)=>{
+      let pointLog=event.target;
+      if(document.getElementById(contactIcons[0].elementId).target!=pointLog&&
+         document.getElementById(contactIcons[1].elementId).target!=pointLog){
+            popUpBox.style.bottom="0";
+            firsTime=true;
+             shell.style.display="none";
+            return;
+      }
+   });
+   contactIcons.forEach(icon=>{
+      if(icon.elementId==el.getAttribute("id")&&firsTime==true){
+         previousContactLink.elementId=icon.elementId;
+         previousContactLink.contactDetail=icon.contactDetail;
+         popUpBox.innerHTML=icon.contactDetail;
+          setTimeout(()=>{
+            popUpBox.style.bottom="70px";
+         },200);
+           shell.style.display="block";
+          firsTime=false;
+      }
+      else if(firsTime==false){
+        if(el.getAttribute("id")!==previousContactLink.elementId&&icon.elementId==el.getAttribute("id")){
+            popUpBox.style.bottom="0";
+            previousContactLink.elementId=icon.elementId;
+            previousContactLink.contactDetail=icon.contactDetail;
+                  setTimeout(()=>{
+            popUpBox.innerHTML=icon.contactDetail;
+            popUpBox.style.bottom="70px";
+         },400);
+        } 
+      }
+   });
+
+}

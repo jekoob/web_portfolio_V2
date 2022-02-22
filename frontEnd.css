@@ -88,7 +88,12 @@ body{
     scroll-behavior: smooth;
     border-radius: 19px;
 }
-
+#photoContainer a{
+	position: relative;
+	display: contents;
+	width: 100%;
+	height: 100%;
+}
 #photoContainer img{
 	width: 100%;
 }
@@ -121,6 +126,29 @@ footer {
   list-style: none;
   text-decoration: none;
   font-size: 30px;
+}
+#popUpBox {
+  position: absolute;
+  display: block;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 4;
+  bottom: -20px;
+  padding: 5px;
+  border-radius: 20px;
+  width: fit-content;
+  background-color: darkgray;
+  color: black;
+  font-size: 23px;
+  transition: bottom 0.5s;
+}
+#shell{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
 }
 .fab,
 .fas {

@@ -28,20 +28,19 @@ let previousContactLink={
    elementId:null,
    contactDetail:null
 };
-let shell = document.createElement("div");
-shell.setAttribute("id","shell");
+
 function popUpContact(el){
    
    
  
-   shell.style.height=screenHeight;
+   //shell.style.height=screenHeight;
    $(shell).on("click",(event)=>{
       let pointLog=event.target;
       if(document.getElementById(contactIcons[0].elementId).target!=pointLog&&
          document.getElementById(contactIcons[1].elementId).target!=pointLog){
             popUpBox.style.bottom="0";
             firsTime=true;
-            body.removeChild(shell);
+            shell.style.display="none";
             return;
       }
    });
@@ -53,7 +52,7 @@ function popUpContact(el){
           setTimeout(()=>{
             popUpBox.style.bottom="70px";
          },200);
-          body.appendChild(shell);
+          shell.style.display="block";
           firsTime=false;
       }
       else if(firsTime==false){
