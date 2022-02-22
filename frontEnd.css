@@ -144,6 +144,7 @@ footer {
   transition: bottom 0.5s;
 }
 #shell{
+  display: none;
   position: absolute;
   top: 0;
   height: 100%;
