@@ -53,12 +53,62 @@ body {
   background:linear-gradient(to bottom right ,rgba(20, 79, 227,0.6)10% ,rgba(120, 120, 120,0.5 )60%,rgba(20, 159, 219, 0.4));
   
 }
+#trapezBg{
+position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 438px;
+    height: 0;
+    line-height: 0;
+    border-top: 57px solid #444;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+}
+#navBar{
+    z-index: 1;
+    width: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 5px;
+}
+#navBar ul{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top:0;
+}
+#navBar li{
+  margin:0 20px;
+  padding: 10px;
+  font-size: 24px;
+}
+#navBar li:nth-child(2){
+  background-color: white;
+  width: 110%;
+  border-radius:10px;
+  text-shadow: 1px 1px 4px black;
+  font-weight: bold;
+}
+#navBar a{
+  text-decoration: none;
+  color: white;
+}
+#navBar li:nth-child(2) a{
+  color:#eece1a;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 4px black;
+  font-weight: bold;
+}
 .quote-wrap {
   z-index: 1;
   height: 100%;
   max-width: 300px;
   margin: auto;
-  margin-top:0;
+  margin-top: 57px;
 }
 #quote {
   background: whitesmoke;
@@ -104,7 +154,7 @@ body {
   transition-duration: 1ms;
   opacity: 0;
   position: absolute;
-  top: 120px;
+  
 }
 .outerWrapper {
   width: 100%;
