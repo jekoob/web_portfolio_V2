@@ -122,34 +122,85 @@ setInterval(()=>{
    }
 }, 5000);
 
-function slideBlankUp(){
+let pagesName = ["FrontEnd","Home","Automation"];
+let currentPage="Home";
+let listNav = document.getElementById("listNav").children;
+
+function openDocx(){
    window.open("Yakov Sachuk CV.docx","viewer"); 
 }
-
-
-
-function slideBlankLeft(){
-   myLinks[1].style.opacity="0";
-   let blankLeft = document.createElement("div");
-   blankLeft.setAttribute("class","blank");
-   blankLeft.setAttribute("id","blankLeft");
-   document.getElementsByTagName("body")[0].appendChild(blankLeft);
-   setTimeout(function(){
-      blankLeft.style.left="100%";
-      myLinks[1].style.opacity="1";
-      window.open("autoProPage.html","_self");
-   },1000);
+function slideHome(event){
+    if(currentPage!=event.textContent){
+     document.getElementById("shell").style.display="block";
+     document.getElementsByClassName("blank")[0].style.width="0";
+     document.getElementsByClassName("currentPage")[0].classList.remove("currentPage");
+     listNav[1].setAttribute("class","currentPage");
+     currentPage=event.textContent;
+     setTimeout(function(){
+      document.getElementsByClassName("blank")[0].remove();
+       document.getElementById("shell").style.display="none";
+     },1000);
+    }
 }
 
-function slideBlankRight(){
-   myLinks[0].style.opacity="0";
-   let blankRight = document.createElement("div");
-   blankRight.setAttribute("class","blank");
-   blankRight.setAttribute("id","blankRight");
-   document.getElementsByTagName("body")[0].appendChild(blankRight);
+function slideBlankLeft(event){
+      for(let i=0;i<pagesName.length;i++){
+         if(pagesName[i]==currentPage){
+            listNav[i].classList.remove("currentPage");
+         }
+      }
+   
+   if(currentPage != event.textContent){
+      listNav[2].setAttribute("class","currentPage");
+      document.getElementById("shell").style.display="block";
+      console.log(currentPage);
+         myLinks[1].style.opacity="0";
+   let blankLeft = document.createElement("iframe");
+   blankLeft.setAttribute("class","blank");
+   blankLeft.setAttribute("id","blankLeft");
+   blankLeft.setAttribute("src","autoProPage.html");
+   document.getElementsByTagName("body")[0].appendChild(blankLeft);
    setTimeout(function(){
-      blankRight.style.left="100%";
-      myLinks[0].style.opacity="1";
-      window.open("frontEndPage.html","_self");
+      if(currentPage == "FrontEnd"){
+         document.getElementById("blankRight").remove();
+      }
+      currentPage=event.textContent;
+      blankLeft.style.animationPlayState = 'paused';
+      myLinks[1].style.opacity="1";
+      blankLeft.style.left="0";
+      document.getElementById("shell").style.display="none";
    },1000);
+   return;
+   }
+
+}
+
+function slideBlankRight(event){
+    for(let i=0;i<pagesName.length;i++){
+         if(pagesName[i]==currentPage){
+            listNav[i].classList.remove("currentPage");
+         }
+      }
+   if(currentPage != event.textContent){
+      document.getElementById("shell").style.display="block";
+      listNav[0].setAttribute("class","currentPage");
+      myLinks[0].style.opacity="0";
+      let blankRight = document.createElement("iframe");
+      blankRight.setAttribute("class","blank");
+      blankRight.setAttribute("id","blankRight");
+      blankRight.setAttribute("src","frontEndPage.html");
+      document.getElementsByTagName("body")[0].appendChild(blankRight);
+      setTimeout(function(){
+         if(currentPage == "Automation"){
+            listNav[1].classList.remove("currentPage");
+            document.getElementById("blankLeft").remove();
+         }
+         currentPage=event.textContent;
+         blankRight.style.animationPlayState = 'paused';
+         myLinks[0].style.opacity="1";
+         blankRight.style.right="0%";
+        document.getElementById("shell").style.display="none";
+      },1000);
+      return;
+   }
 }

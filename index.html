@@ -14,10 +14,10 @@
      <div id="trapezBg">
      </div>
      <div id="navBar">
-        <ul>
-            <li><a href="">FrontEnd</a></li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Automation</a></li>
+        <ul id="listNav">
+            <li onclick="slideBlankRight(this)">FrontEnd</li>
+            <li class="currentPage"  onclick="slideHome(this)">Home</li>
+            <li onclick="slideBlankLeft(this)">Automation</li>
         </ul>
     </div>
     <div class="quote-wrap">
@@ -32,7 +32,7 @@
 
     <header class="outerWrapper">
     <div class="row">
-            <div id="FrontEndLink" class="myLinks" onclick="slideBlankRight()">
+            <div id="FrontEndLink" class="myLinks" onclick="slideBlankRight(this)">
             <img class="imgLink" src="img/fronEnd.png" onclick="">
              <h1 onclick="rotateIcon()">
                     <span class="text-secondary">Frond</span>end</h1>
@@ -44,16 +44,16 @@
                     Sachuk
                 </span>
             </h1>
-            <div class="title"><span style="text-shadow:2px 2px 3px black;color:red ;">QA/ATUOMATION</span> - Junior</div>
+            <div class="title"><span style="text-shadow:2px 2px 3px black;color:red ;">QA/AUTOMATION</span> - Junior</div>
             
         </div>
-        <div id="autoLink" class="myLinks" onclick="slideBlankLeft()">
+        <div id="autoLink" class="myLinks" onclick="slideBlankLeft(this)">
             <img class="imgLink" src="img/auto.png" >
              <h1 >
-                    <span class="text-secondary">Atuo</span>mation</h1>
+                    <span class="text-secondary">Auto</span>mation</h1>
         </div>
     </div>
-        <div class="row">  <div id="cvLink" class="myLinks" onclick="slideBlankUp()">
+        <div class="row">  <div id="cvLink" class="myLinks" onclick="openDocx()">
         <img class="imgLink" src="img/cv.png"  style="color:black;">
         <h1 >
             <span class="text-secondary">MY</span> - CV

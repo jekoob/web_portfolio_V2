@@ -33,7 +33,7 @@ body{
 	background-color: rgba(255,255,255, 0.7);
 	font-family: hollow;
 	text-align: center;
-	margin-top: 29px;
+	margin-top: 70px;
 	font-size: 40px;
 	font-weight: 200;
 	letter-spacing: 3px;
@@ -101,57 +101,4 @@ body{
 #photoContainer::-webkit-scrollbar {
 display: none; 
 visibility: none;
-}
-footer {
-  position: fixed;
-  height: 45px;
-  width: 100%;
-  bottom: 0px;
-  z-index: 5;
-  background-color: #444;
-}
-.icons {
-  width: 260px;
-  left: 0;
-  right: 0;
-  padding: unset;
-  margin: auto;
-  display: flex;
-  cursor: pointer;
-}
-.icons li {
-  margin: auto;
-  margin-top: 8px;
-  align-items: center;
-  list-style: none;
-  text-decoration: none;
-  font-size: 30px;
-}
-#popUpBox {
-  position: absolute;
-  display: block;
-  right: 0;
-  left: 0;
-  margin: auto;
-  z-index: 4;
-  bottom: -20px;
-  padding: 5px;
-  border-radius: 20px;
-  width: fit-content;
-  background-color: darkgray;
-  color: black;
-  font-size: 23px;
-  transition: bottom 0.5s;
-}
-#shell{
-  display: none;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 3;
-}
-.fab,
-.fas {
-  color: whitesmoke;
 }

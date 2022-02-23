@@ -33,7 +33,7 @@ body{
 	background-color: rgba(255,255,255, 0.7);
 	font-family: hollow;
 	text-align: center;
-	margin-top: 29px;
+	margin-top: 70px;
 	font-size: 40px;
 	font-weight: 200;
 	letter-spacing: 3px;
@@ -91,33 +91,4 @@ body{
 }
 .siteLink a{
 	text-decoration: none;
-}
-footer {
-  position: fixed;
-  height: 45px;
-  width: 100%;
-  bottom: 0px;
-  z-index: 5;
-  background-color: #444;
-}
-.icons {
-  width: 260px;
-  left: 0;
-  right: 0;
-  padding: unset;
-  margin: auto;
-  display: flex;
-  cursor: pointer;
-}
-.icons li {
-  margin: auto;
-  margin-top: 8px;
-  align-items: center;
-  list-style: none;
-  text-decoration: none;
-  font-size: 30px;
-}
-.fab,
-.fas {
-  color: whitesmoke;
 }
