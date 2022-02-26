@@ -34,7 +34,7 @@ body{
 	font-family: hollow;
 	text-align: center;
 	margin-top: 70px;
-	font-size: 40px;
+	font-size: 50px;
 	font-weight: 200;
 	letter-spacing: 3px;
 	transition:opacity 0.5s;
@@ -44,6 +44,7 @@ body{
   text-shadow: -1px -2px 4px black;
 }
 #proContainer{
+	font-size: 20px;
 	position: relative;
 	margin: auto;
 	opacity: 0;
@@ -51,7 +52,7 @@ body{
 	margin-top: 158px;
 	margin-bottom: 300px;
 	width: 80%;
-    height: 593px;
+    height: 75%;
     overflow-y: scroll;
     direction: rtl;
 }
@@ -69,6 +70,7 @@ body{
 }
 
 .projects h2{
+	font-size: 40px;
 	display: inline-block;
 	width: fit-content;
 	padding: 6px 24px 3px 6px;
@@ -78,6 +80,7 @@ body{
 }
 .projects h3{
 	margin-top: 30px;
+	font-size: 30px;
 }
 .proContect{
 	line-height: 1.6;
