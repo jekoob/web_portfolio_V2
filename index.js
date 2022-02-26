@@ -144,13 +144,14 @@ function slideHome(event){
 }
 
 function slideBlankLeft(event){
+    
+   
+   if(currentPage != event.textContent){
       for(let i=0;i<pagesName.length;i++){
          if(pagesName[i]==currentPage){
             listNav[i].classList.remove("currentPage");
          }
       }
-   
-   if(currentPage != event.textContent){
       listNav[2].setAttribute("class","currentPage");
       document.getElementById("shell").style.display="block";
       console.log(currentPage);
@@ -164,24 +165,24 @@ function slideBlankLeft(event){
       if(currentPage == "FrontEnd"){
          document.getElementById("blankRight").remove();
       }
+      blankLeft.style.width="100%";
       currentPage=event.textContent;
-      blankLeft.style.animationPlayState = 'paused';
       myLinks[1].style.opacity="1";
-      blankLeft.style.left="0";
       document.getElementById("shell").style.display="none";
-   },1000);
+   },500);
    return;
    }
 
 }
 
 function slideBlankRight(event){
+    
+   if(currentPage != event.textContent){
     for(let i=0;i<pagesName.length;i++){
          if(pagesName[i]==currentPage){
             listNav[i].classList.remove("currentPage");
          }
       }
-   if(currentPage != event.textContent){
       document.getElementById("shell").style.display="block";
       listNav[0].setAttribute("class","currentPage");
       myLinks[0].style.opacity="0";
@@ -195,12 +196,11 @@ function slideBlankRight(event){
             listNav[1].classList.remove("currentPage");
             document.getElementById("blankLeft").remove();
          }
+         blankRight.style.width="100%";
          currentPage=event.textContent;
-         blankRight.style.animationPlayState = 'paused';
          myLinks[0].style.opacity="1";
-         blankRight.style.right="0%";
-        document.getElementById("shell").style.display="none";
-      },1000);
+         document.getElementById("shell").style.display="none";
+      },500);
       return;
    }
 }
