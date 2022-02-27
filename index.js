@@ -192,11 +192,12 @@ function slideBlankRight(event){
       blankRight.setAttribute("src","frontEndPage.html");
       document.getElementsByTagName("body")[0].appendChild(blankRight);
       setTimeout(function(){
+        blankRight.style.width="100%";
          if(currentPage == "Automation"){
             listNav[1].classList.remove("currentPage");
             document.getElementById("blankLeft").remove();
          }
-         blankRight.style.width="100%";
+         
          currentPage=event.textContent;
          myLinks[0].style.opacity="1";
          document.getElementById("shell").style.display="none";
