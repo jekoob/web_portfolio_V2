@@ -87,6 +87,7 @@ body{
     overflow-x: scroll;
     scroll-behavior: smooth;
     border-radius: 19px;
+    column-gap: 10px;
 }
 #photoContainer a{
 	position: relative;

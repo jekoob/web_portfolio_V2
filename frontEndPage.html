@@ -4,10 +4,18 @@
 	<title>FrondEndPro</title>
 	<link rel="stylesheet" type="text/css" href="frontEnd.css">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="tempale.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-	<div id="bg-img"></div>
+	 <div id="bg-img"></div>
+     <div id="navBar">
+        <ul id="listNav">
+            <li class="currentPage" onclick="slideBlankRight(this)">FrontEnd</li>
+            <li onclick="slideHome(this)">Home</li>
+            <li onclick="slideBlankLeft(this)">Automation</li>
+        </ul>
+    </div>
 	<h1 id="topTitle">FrondEnd <span class="text-secondary">projects</span></h1>
 	<main id="gallery">
 		<div id="scale">
@@ -42,7 +50,19 @@
 			</div>
 		</div>
 	</main>
+    <footer>
+    <ul class="icons">
+        <li><a target="_blank" href="https://www.linkedin.com/in/yakov-sachuk-24414721a/"><i class="fab fa-linkedin"></i></a></li>
+        <li><a target="_blank" href="https://github.com/jekoob"><i class="fab fa-github-square"></i></a></li>
+        <li><a target="_blank" href="https://www.facebook.com/yakov.sachuk"><i class="fab fa-facebook-square"></i></a></li>
+        <li><i class="fas fa-envelope" id="email" onclick="popUpContact(this)"></i></li>
+        <li><i class="fas fa-phone-square" id="phone" onclick="popUpContact(this)"></i></li>
+    </ul>
+	</footer>
+	<div id="popUpBox"></div>
+	<div id="shell"></div>
 	<script type="text/javascript" src="front.js"></script>
+	<script type="text/javascript" src="slides.js"></script>
 </body>
 
 </html>

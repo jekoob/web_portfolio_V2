@@ -3,11 +3,20 @@
 <head>
 	<title>MyAtuo</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="tempale.css">
 	<link rel="stylesheet" type="text/css" href="auto.css">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<div id="bg-img"></div>
+	<div id="navBar">
+        <ul id="listNav">
+            <li onclick="slideBlankRight(this)">FrontEnd</li>
+            <li onclick="slideHome(this)">Home</li>
+            <li class="currentPage" onclick="slideBlankLeft(this)">Automation</li>
+        </ul>
+    </div>
 	<h1 id="topTitle">Automation <span class="text-secondary">projects</span></h1>
 	<main id="proContainer">
 		<div>
@@ -33,10 +42,22 @@
 						<p><a target = "_blank" href="https://github.com/jekoob/Shichor_Project">Click here to see my code in Git</a></p>
 					</div>
 				<h3>The Allure Report:</h3>
-				<a width="fit-content height="100%" href="img/allure.jpeg" target="_blank"><img src="img/allure.jpeg" height="250px" width="450px"></a>
+				<a width="fit-content" height="100%" href="img/allure.jpeg" target="_blank"><img src="img/allure.jpeg" height="250px" width="450px"></a>
 		</div>
 
 	</main>
-   	<script type="text/javascript" src="autoPro.js"></script>
+    <footer>
+        <ul class="icons">
+            <li><a target="_blank" href="https://www.linkedin.com/in/yakov-sachuk-24414721a/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a target="_blank" href="https://github.com/jekoob"><i class="fab fa-github-square"></i></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/yakov.sachuk"><i class="fab fa-facebook-square"></i></a></li>
+            <li><i class="fas fa-envelope" id="email" onclick="popUpContact(this)"></i></li>
+            <li><i class="fas fa-phone-square" id="phone" onclick="popUpContact(this)"></i></li>
+        </ul>
+    </footer>
+    <div id="popUpBox"></div>
+    <div id="shell"></div>
+    <script type="text/javascript" src="autoPro.js"></script>
+   	<script type="text/javascript" src="slides.js"></script>
 </body>
 </html>

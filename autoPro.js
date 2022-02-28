@@ -1,5 +1,6 @@
 let topTitle = document.getElementById("topTitle");
 let proContainer = document.getElementById("proContainer");
+let currentPage="Automation";
 setTimeout(()=>{
 	this.topTitle.style.opacity="1";
 },500);
