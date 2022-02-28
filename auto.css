@@ -97,6 +97,10 @@ body{
 	margin-top: 30px;
 	font-size: 30px;
 }
+#pointer{
+	height: 47px;
+    transform: translateY(29px)rotate(139deg);
+}
 .proContect{
 	line-height: 1.6;
 	margin-top: 2px;
