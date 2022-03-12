@@ -32,8 +32,13 @@
 }
 .blank{
     position: absolute;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
     z-index: 2;
-    background-color: gray;
     opacity: 1;
     top:0;
 }
@@ -42,6 +47,13 @@
     height: 0%;
     top: 0;
     transition: height 0.9s;
+}
+#bg-shadow{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background:linear-gradient(to bottom right ,rgba(20, 79, 227,0.6)10% ,rgba(120, 120, 120,0.5 )60%,rgba(20, 159, 219, 0.4));
+  
 }
 #blankRight{
     width: 0%;
