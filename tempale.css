@@ -1,18 +1,18 @@
-#navBar{
-    z-index: 4;
-    width: 100%;
-    position: absolute;
-    background-color: #444;
+#navBar {
+  z-index: 4;
+  width: 100%;
+  position: absolute;
+  background-color: #444;
 }
-#navBar ul{
+#navBar ul {
   width: fit-content;
   display: flex;
   list-style: none;
   padding: 6px;
-  margin:auto;
+  margin: auto;
 }
-#navBar li{
-  margin:0 20px;
+#navBar li {
+  margin: 0 20px;
   padding: 10px;
   font-size: 24px;
   transition: color 1s;
@@ -21,53 +21,56 @@
   transition: background 0.5s;
 }
 
-#navBar .currentPage{
+#navBar .currentPage {
   background-color: white;
-  border-radius:10px;
+  border-radius: 10px;
   width: 110%;
-  color:#eece1a;
+  color: #eece1a;
   letter-spacing: 3px;
   text-shadow: 1px 1px 4px black;
   font-weight: bold;
 }
-.blank{
-    position: absolute;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    overflow: hidden;
-    display: flex;
-    z-index: 2;
-    opacity: 1;
-    top:0;
+.blank {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  z-index: 2;
+  opacity: 1;
+  top: 0;
 }
-#blankUp{
-    width: 100%;
-    height: 0%;
-    top: 0;
-    transition: height 0.9s;
+#blankUp {
+  width: 100%;
+  height: 0%;
+  top: 0;
+  transition: height 0.9s;
 }
-#bg-shadow{
+#bg-shadow {
   position: absolute;
   height: 100%;
   width: 100%;
-  background:linear-gradient(to bottom right ,rgba(20, 79, 227,0.6)10% ,rgba(120, 120, 120,0.5 )60%,rgba(20, 159, 219, 0.4));
-  
+  background: linear-gradient(
+    to bottom right,
+    rgba(20, 79, 227, 0.6) 10%,
+    rgba(120, 120, 120, 0.5) 60%,
+    rgba(20, 159, 219, 0.4)
+  );
 }
-#blankRight{
-    width: 0%;
-    height: 100%;
-    left: :0%;
-    transition: width 0.9s;
+#blankRight {
+  width: 0%;
+  height: 100%;
+  left: 0%;
+  transition: width 0.9s;
 }
-#blankLeft{
-    width: 0%;
-    height: 100%;
-    right:0%;
-    transition: width 0.9s;
+#blankLeft {
+  width: 0%;
+  height: 100%;
+  right: 0%;
+  transition: width 0.9s;
 }
-
 
 footer {
   position: fixed;
@@ -111,7 +114,7 @@ footer {
   font-size: 23px;
   transition: bottom 0.5s;
 }
-#shell{
+#shell {
   display: none;
   position: absolute;
   top: 0;
