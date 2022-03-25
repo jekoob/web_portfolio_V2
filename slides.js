@@ -3,7 +3,7 @@ let listNav = document.getElementById("listNav").children;
 let previous = null;
 let firstTime=true;
 function openDocx(){
-   window.open("Yakov Sachuk CV.docx","viewer"); 
+   window.open("Yakov Sachuk CV.pdf","viewer"); 
 }
 
 function slideHome(event){
