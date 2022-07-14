@@ -38,6 +38,108 @@ body {
   letter-spacing: 3px;
   transition: opacity 0.5s;
 }
+#proTitle{
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  top:37px;
+  background-color: lightgray;
+  opacity: 0.7;
+  color: black;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+#proggressTrail{
+  display: flex;
+  width: 55%;
+  margin: auto;
+  grid-column-gap: 35px;
+  flex-direction: row;
+  position: relative;
+  text-align: start;
+  bottom:50px;
+  padding-left: 10%;
+}
+#proggressTitle{
+    position: absolute;
+    color: white;
+    bottom: 20px;
+    left: 10px;
+}
+.noteBtn{
+  border-radius:50%;
+  border:2px solid white;
+  height: 15px;
+  width:15px;
+  position: absolute;
+  bottom: 36.5px;
+}
+
+.langName{
+  position: relative;
+  color :white;
+  font-size: 20px;
+  bottom: 36px;
+  left: 24px;
+}
+.portion{
+  position: relative;
+  color: white;
+  bottom: 13px;
+  left: 8px;
+  font-size: 15px;
+}
+.trail{
+  height: 0;
+  border: 3px white solid;
+  border-radius: 20px;
+  transition: width 1s;
+}
+
+
+#js{
+  width: 33.3%;
+  height: 0;
+  border-radius: 20px;
+  /*margin: 0 6px;*/
+}
+#js .trail{
+  width: 30%;
+  background-color: yellow;
+  border-color: yellow;
+}
+#js .noteBtn{
+  background-color: yellow;
+}
+
+#css{
+  width: 33%;
+}
+#css .trail{
+  width: 30%;
+  border-color: blue;
+  background-color: blue;
+}
+#css .noteBtn{
+  background-color: blue;
+}
+
+#html{
+  width: 30%;
+}
+
+#html .trail{
+  width: 30%;
+  border-color: red;
+  background-color: red;
+}
+
+#html .noteBtn{
+  background-color: red;
+}
+
+
 .text-secondary {
   color: #eece1a;
   text-shadow: -1px -2px 4px black;
@@ -47,7 +149,7 @@ body {
   opacity: 0;
   position: relative;
   width: 70%;
-  height: 100%;
+  height: 39vw;
   margin: auto;
   margin-top: 150px;
   transition: opacity 1s;
