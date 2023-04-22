@@ -126,3 +126,13 @@ footer {
 .fas {
   color: whitesmoke;
 }
+@media(max-width: 1170px){
+  #navBar{
+    position: fixed;
+  }
+}
+@media(max-width: 500px){
+  #navBar{
+    display: none;
+  }
+}

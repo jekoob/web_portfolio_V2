@@ -197,3 +197,32 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+@media(max-width: 1170px){
+	#navBar{
+		position: fixed;
+	}
+	body{
+		overflow-y: scroll;
+		/*overflow: scroll;*/
+		height: 160%;
+	}
+	header.outerWrapper{
+		top: 22%;
+		display: grid;
+		align-self: center;
+		width: 0;
+	}
+
+	div.row{
+		display: contents;
+	}
+}
+
+@media (max-width: 500px){
+	body{
+		background-color: lemonchiffon;
+		background-image: none;
+	}
+
+}
