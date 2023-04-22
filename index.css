@@ -8,7 +8,7 @@
 }
 @keyframes dribblingFram{
   0%{transform: translate(0px, 0px);}
-  50%{transform: translate(0px, 30px);}
+  50%{transform: translate(0px, 70px);}
   100%{transform: translate(0px, 0px);}
 }
 @keyframes spin {
@@ -41,7 +41,7 @@ body {
 }
 #bg-img{
   position: absolute;
-  height: 100%;
+  height: 113%;
   width: 100%;
   background:linear-gradient(to bottom right ,rgba(20, 79, 227,0.6)10% ,rgba(120, 120, 120,0.5 )60%,rgba(20, 159, 219, 0.4));
   
@@ -51,7 +51,7 @@ body {
   height: 100%;
   max-width: 300px;
   margin: auto;
-  margin-top: 57px;
+  margin-top: 30px;
 }
 #quote {
   background: whitesmoke;
@@ -76,11 +76,28 @@ body {
 .angle {
   width: 0;
   height: 0;
-  border-left: 18px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 40px solid whitesmoke;
+  top:-3px;
+  border-left: 13px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 30px solid whitesmoke;
   content: "";
   z-index: 2;
+  left: 227px;
+  float: left;
+  margin-left: -25px;
+  position: relative;
+  transition: opacity 1s;
+  transition-delay: 1s;
+  opacity: 0;
+}
+.subAngel {
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 33px solid black;
+  content: "";
+  z-index: 1;
   left: 227px;
   float: left;
   margin-left: -25px;
@@ -114,7 +131,7 @@ body {
    flex-direction: row;
 }
 .main{
- margin: 70px 255px 0;
+ margin: 0px 255px 0;
 }
 .pro-img {
   background-image: url(img/me.jpeg);
@@ -170,7 +187,7 @@ body {
   text-shadow: 6px -1px 7px white;
 }
 #cvLink{
-  margin-top: 0;
+  margin-top: 60px;
 }
 
 .bug {
@@ -217,12 +234,21 @@ body {
 	div.row{
 		display: contents;
 	}
-}
-
-@media (max-width: 500px){
-	body{
-		background-color: lemonchiffon;
-		background-image: none;
+	.main{
+		margin: 0;
+		order:1;
 	}
-
+	#FrontEndLink{
+		order:2;
+	}
+	#autoLink{
+		order:3;
+	}
+	#cvLink{
+		order:4;
+	}
+	.myLinks{
+		margin-top: 10%;
+	}
 }
+
