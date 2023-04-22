@@ -40,7 +40,7 @@ body {
   overflow: hidden;
 }
 #bg-img{
-  position: absolute;
+  position: fixed;
   height: 113%;
   width: 100%;
   background:linear-gradient(to bottom right ,rgba(20, 79, 227,0.6)10% ,rgba(120, 120, 120,0.5 )60%,rgba(20, 159, 219, 0.4));
