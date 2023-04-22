@@ -57,7 +57,7 @@ setInterval(()=>{
          quoteAngle.style.transform="translateX("+(-150)+"px) scaleX(-1)";
          quoteSubAngle.style.opacity=1;
          quoteSubAngle.style.transform="translateX("+(-150)+"px) scaleX(-1)";
-      }, 1000);
+      }, 1450);
     
       count++;
    }
@@ -78,7 +78,7 @@ setInterval(()=>{
          quoteSubAngle.style.opacity=1;
          quoteAngle.style.transform="translateX("+(0)+"px) scaleX(1)";
          quoteSubAngle.style.transform="translateX("+(0)+"px) scaleX(1)";
-      }, 1100);
+      }, 1450);
       count++;
    }
 }, 5000);
