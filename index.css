@@ -106,14 +106,28 @@ body {
   transition-delay: 1s;
   opacity: 0;
 }
-
+#bugWrapper{
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 .bugQoute {
   height: 100px;
   width: 90px;
   transition-duration: 1ms;
   opacity: 0;
-  position: absolute;
   
+}
+.bugQoute:nth-child(1){
+	order: 2;
+	margin-left: auto;
+	transition-duration: 1s;
+	transition-delay: 30ms;
+}
+.bugQoute:nth-child(2){
+	order: 1;
+	margin-right: auto;
+	transition-duration: 1s;
+	transition-delay: 30ms;
 }
 .outerWrapper {
   width: 100%;
@@ -230,7 +244,6 @@ body {
 		align-self: center;
 		width: 0;
 	}
-
 	div.row{
 		display: contents;
 	}
@@ -249,6 +262,12 @@ body {
 	}
 	.myLinks{
 		margin-top: 10%;
+	}
+}
+
+@media(min-width: 550px){
+	#quote{
+		margin-top: 66px;
 	}
 }
 

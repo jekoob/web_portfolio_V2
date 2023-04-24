@@ -3,10 +3,11 @@
   width: 100%;
   position: absolute;
   background-color: #444;
+  display: flex;
 }
 #navBar ul {
   width: fit-content;
-  display: flex;
+  display: inline-flex;
   list-style: none;
   padding: 6px;
   margin: auto;
@@ -150,14 +151,15 @@ footer {
 .fas {
   color: whitesmoke;
 }
-@media(max-width: 1170px){
-  #navBar{
-    position: fixed;
-  }
-}
-@media(max-width: 500px){
+
+@media(max-width: 550px){
   #navBar{
     display: none;
   }
 
+}
+@media(min-width: 500px){
+  .menu-btn{
+    display: none;
+  }
 }
