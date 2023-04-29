@@ -79,16 +79,9 @@ body {
   border-left: 13px solid transparent;
   border-right: 6px solid transparent;
   border-top: 30px solid whitesmoke;
-    transition: opacity 2s;
+  transition: opacity 2s;
   transition-delay: 1s;
-  /*content: "";*/
   z-index: 2;
-  /*left: 227px;*/
-  /*float: left;*/
-  /*margin-left: -25px;*/
-  /*position: relative;*/
-/*  transition: opacity 1s;
-  transition-delay: 1s;*/
   opacity: 1;
 }
 #anglesGrid{
@@ -292,10 +285,10 @@ body {
 	body{
 		overflow-y: scroll;
 		/*overflow: scroll;*/
-		height: 160%;
+		height: 210%;
 	}
 	header.outerWrapper{
-		top: 22%;
+		top: 18%;
 		display: grid;
 		align-self: center;
 		width: 0;
@@ -327,41 +320,38 @@ body {
 
   }
 
-.arrow span{
-  display: block; 
-  width: 20px;
-  height: 20px;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  margin-top: 10px;
-  transform: rotate(45deg);
-  margin-top: -10px;
-  animation: scroll 1.6s infinite;
-}
+  .arrow span{
+    display: block; 
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-top: 10px;
+    transform: rotate(45deg);
+    margin-top: -10px;
+    animation: scroll 1.6s infinite;
+  }
 
-.arrow span:nth-child(2){
-   animation-delay: -.1s;
-}
-.arrow span:nth-child(3){
-   animation-delay: -.2s;
-}
-/*.arrow span : nth-child(2){
-  animation-delay: 4s ;  
-}*/
+  .arrow span:nth-child(2){
+     animation-delay: -.1s;
+  }
+  .arrow span:nth-child(3){
+     animation-delay: -.2s;
+  }
 
-@keyframes scroll{
-  0%{
-    opacity: 0;
-    transform: rotate(45deg) translate(-20px,-20px);
+  @keyframes scroll{
+    0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+    }
   }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-    transform: rotate(45deg) translate(20px,20px);
-  }
-}
 }
 
 @media(min-width: 550px){
@@ -374,8 +364,6 @@ body {
 	#quote{
 		height: none;
 		padding: 12px;
-		/*font-size: 5.5vw;*/
-
 	}
 	.angle{
 		left: 72vw;
